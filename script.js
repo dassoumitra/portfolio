@@ -43,7 +43,7 @@
       toast.textContent = '⚠ Please enter a valid email address.';
       toast.className = 'form-toast error'; return;
     }
-    const mailto = `mailto:your-email@example.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    const mailto = `mailto:soumitrad801@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
     window.location.href = mailto;
     toast.textContent = '✓ Opening your email client…';
     toast.className = 'form-toast success';
