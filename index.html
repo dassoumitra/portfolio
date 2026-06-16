@@ -14,21 +14,24 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo"><span>~/</span>soumitra.dev</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
   <div class="nav-actions">
     <a href="resume.pdf" download="Soumitra_Das_Resume.pdf" class="btn btn-resume">
       <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2.75 14A1.75 1.75 0 011 12.25v-2.5a.75.75 0 011.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25v-2.5a.75.75 0 011.5 0v2.5A1.75 1.75 0 0113.25 14H2.75zm4.5-9.06v6.19a.75.75 0 001.5 0V4.94l1.97 1.97a.75.75 0 001.06-1.06L8.53 3.11a.75.75 0 00-1.06 0L4.72 5.85a.75.75 0 001.06 1.06l1.47-1.47z"/></svg>
       Resume
     </a>
     <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle light/dark mode">🌙</button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" class="nav-link-item">About</a></li>
+    <li><a href="#education" class="nav-link-item">Education</a></li>
+    <li><a href="#projects" class="nav-link-item">Projects</a></li>
+    <li><a href="#skills" class="nav-link-item">Skills</a></li>
+    <li><a href="#achievements" class="nav-link-item">Achievements</a></li>
+    <li><a href="#contact" class="nav-link-item">Contact</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
