@@ -54,10 +54,11 @@
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  padding: 0 1.5rem;
   height: 60px;
   background: var(--nav-bg);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 .nav-logo {
@@ -65,11 +66,10 @@ nav {
   font-size: 0.9rem;
   color: var(--cyan);
   letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 .nav-logo span { color: var(--muted); }
-.nav-links {
-  display: flex; gap: 2rem; list-style: none;
-}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
   font-size: 0.82rem;
   font-weight: 500;
@@ -80,13 +80,17 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--text); }
-.nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+.nav-actions {
+  display: flex; align-items: center; gap: 0.5rem;
+  flex-shrink: 0;
+}
 
 /* ── HAMBURGER ── */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
   width: 36px; height: 36px;
   border-radius: 8px;
@@ -98,8 +102,8 @@ nav {
 }
 .hamburger span {
   display: block;
-  width: 100%; height: 1.5px;
-  background: var(--muted);
+  width: 18px; height: 1.5px;
+  background: var(--text);
   border-radius: 2px;
   transition: all 0.3s;
   transform-origin: center;
@@ -109,6 +113,7 @@ nav {
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--cyan); }
 
 @media (max-width: 768px) {
+  nav { padding: 0 1rem; }
   .hamburger { display: flex; }
   .nav-links {
     display: none;
@@ -117,31 +122,32 @@ nav {
     background: var(--bg-card);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
-    padding: 1rem 1.5rem 1.5rem;
+    padding: 0.5rem 1.5rem 1.5rem;
     gap: 0;
     z-index: 99;
-    backdrop-filter: blur(12px);
   }
   .nav-links.open { display: flex; }
   .nav-links li { border-bottom: 1px solid var(--border); }
   .nav-links li:last-child { border-bottom: none; }
   .nav-links a {
     display: block;
-    padding: 0.85rem 0;
-    font-size: 0.9rem;
+    padding: 0.9rem 0;
+    font-size: 0.88rem;
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
   .nav-links a:hover { color: var(--cyan); }
+  .btn-resume {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.8rem;
+  }
 }
 
 @media (max-width: 400px) {
-  .btn-resume {
-    padding: 0.5rem 0.6rem;
-    font-size: 0;
-  }
-  .btn-resume svg { width: 15px; height: 15px; }
+  .btn-resume span { display: none; }
+  .btn-resume { padding: 0.45rem 0.6rem; }
+  nav { padding: 0 0.75rem; }
 }
 
   /* ── SECTIONS ── */
